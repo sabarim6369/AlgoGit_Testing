@@ -1,0 +1,36 @@
+Here's a step-by-step explanation of the concept used in the given code:
+
+**Understanding the Problem**
+
+The problem is to find the diameter of a binary tree, which is the length of the longest path across the tree. The diameter of a binary tree is the maximum path length from a node to a node that is not a descendant of that node.
+
+**TreeNode Structure**
+
+The code defines a `TreeNode` struct, which represents a node in the binary tree. Each node has an integer value (`val`), a pointer to its left child (`left`), and a pointer to its right child (`right`). The constructor for the `TreeNode` class initializes the node with a value and initializes its children to `nullptr`.
+
+**Solution Class**
+
+The code defines a `Solution` class, which contains a method to find the diameter of a binary tree.
+
+**helper Method**
+
+The `helper` method is a recursive function that takes a `TreeNode*` (a pointer to a node in the binary tree) as input and returns an integer representing the maximum diameter found so far.
+
+Here's how the `helper` method works:
+
+1. If the input node is `nullptr`, the function returns 0, indicating that there is no node to process.
+2. The function recursively calls itself on the left and right children of the input node, storing the results in `leftmax` and `rightmax`, respectively.
+3. The function calculates the maximum diameter found so far by taking the maximum of the current diameter value (`maxdiameter`) and the sum of the left and right maximum diameters (`leftmax + rightmax`). This ensures that the maximum diameter is updated correctly.
+4. The function returns the maximum diameter found in the left and right subtrees, plus 1 (to account for the current node).
+
+**diameterOfBinaryTree Method**
+
+The `diameterOfBinaryTree` method is the main entry point for the solution. It takes a `TreeNode*` (a pointer to the root of the binary tree) as input and returns the diameter of the binary tree.
+
+Here's how the `diameterOfBinaryTree` method works:
+
+1. The method calls the `helper` method recursively on the root node, passing the root node as input.
+2. The `helper` method updates the `maxdiameter` value with the maximum diameter found in the binary tree.
+3. The method returns the maximum diameter value found in the binary tree, which is stored in the `maxdiameter` variable.
+
+In summary, the code uses a recursive approach to find the diameter of a binary tree by traversing the tree and updating the maximum diameter value as it goes. The `helper` method is used to recursively traverse the tree and update the maximum diameter value, while the `diameterOfBinaryTree` method serves as the main entry point for the solution.
