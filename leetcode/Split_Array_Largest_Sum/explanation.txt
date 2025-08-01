@@ -1,0 +1,30 @@
+Here's a step-by-step explanation of the given code:
+
+**The Problem Statement**
+The problem is to split an array into k subarrays such that the maximum element in each subarray is minimum. The given code solves this problem using binary search.
+
+**The `ispossible` Function**
+This function checks whether it is possible to split the array into k subarrays such that the maximum element in each subarray is not more than mid. It iterates through the array and calculates the sum of the current subarray and the count of subarrays. If the count of subarrays exceeds k, it returns false; otherwise, it continues iterating.
+
+Here's a breakdown of the `ispossible` function:
+
+* Initialize `currsum` to 0 and `count` to 0.
+* Iterate through the array:
+	+ If the current sum plus the current element exceeds mid, increment `count` by 1 and reset `currsum` to the current element.
+	+ Otherwise, add the current element to `currsum`.
+* Return whether `count` is less than or equal to k.
+
+**The `splitArray` Function**
+This function finds the minimum maximum element in each subarray. It uses binary search to find the minimum maximum element that makes the `ispossible` function return true.
+
+Here's a breakdown of the `splitArray` function:
+
+* Initialize `left` to the maximum element in the array and `right` to the sum of all elements in the array.
+* Initialize `minans` to the maximum possible integer value.
+* Iterate through the possible values of the maximum element in each subarray (mid):
+	+ Calculate the mid value as the average of `left` and `right`.
+	+ If the `ispossible` function returns true for the mid value, update `minans` to `mid` and set `right` to `mid - 1`.
+	+ Otherwise, set `left` to `mid + 1`.
+* Return `minans`, which is the minimum maximum element in each subarray.
+
+The binary search approach is used because the problem has a binary search property: if `ispossible(mid)` returns false, then `ispossible(mid + 1)` must also return false; and if `ispossible(mid)` returns true, then `ispossible(mid - 1)` must also return true.
