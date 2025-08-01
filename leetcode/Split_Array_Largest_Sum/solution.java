@@ -1,0 +1,56 @@
+currsum=a;
+                count++;
+                
+            }
+            else{
+                currsum+=a;
+            }
+        }
+        return count<=k;
+    }
+    int splitArray(vector<int>& nums, int k) {
+        int left=*max_element(nums.begin(),nums.end());
+        int right=accumulate(nums.begin(),nums.end(),0);
+        int minans=INT_MAX;
+        while(left<=right){
+            int mid=(left+right)/2;
+            if(ispossible(mid,nums,k)){
+                minans=mid;
+                right=mid-1;
+            }
+            else{
+                left=mid+1;
+            }
+            
+        }
+        return minans;
+    }
+};
+                currsum=a;
+                count++;
+                
+            }
+            else{
+                currsum+=a;
+            }
+        }
+        return count<=k;
+    }
+    int splitArray(vector<int>& nums, int k) {
+        int left=*max_element(nums.begin(),nums.end());
+        int right=accumulate(nums.begin(),nums.end(),0);
+        int minans=INT_MAX;
+        while(left<=right){
+            int mid=(left+right)/2;
+            if(ispossible(mid,nums,k)){
+                minans=mid;
+                right=mid-1;
+            }
+            else{
+                left=mid+1;
+            }
+            
+        }
+        return minans;
+    }
+};
