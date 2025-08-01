@@ -1,0 +1,26 @@
+Here's a step-by-step explanation of the concept used in the given code:
+
+**Fibonacci Series**
+
+The code implements a function to calculate the `n`th Fibonacci number. The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, usually starting with 0 and 1.
+
+**Memoization**
+
+The given code uses a technique called memoization to optimize the calculation of the Fibonacci series. Memoization is an optimization technique used primarily to speed up computation by storing the results of expensive function calls and reusing them when the same inputs occur again.
+
+**Dynamic Programming**
+
+The code applies dynamic programming to calculate the Fibonacci series. Dynamic programming is an algorithmic technique used to solve complex problems by breaking them down into smaller subproblems, solving each subproblem only once, and storing the solutions to subproblems to avoid redundant computation.
+
+**How the Code Works**
+
+Here's a step-by-step breakdown of how the code works:
+
+1. The `fib` function takes an integer `n` as input and returns the `n`th Fibonacci number.
+2. If `n` is 0, the function returns 0, as the 0th Fibonacci number is by definition 0.
+3. The function initializes two variables: `prevprev` and `prev`, which will hold the previous two Fibonacci numbers. Initially, `prevprev` is set to 0 and `prev` is set to 1, as these are the first two Fibonacci numbers.
+4. The function enters a for loop that runs from `i` = 2 to `n`. In each iteration, it calculates the next Fibonacci number (`curr`) as the sum of the previous two numbers (`prevprev` and `prev`).
+5. The function updates the `prevprev` and `prev` variables by assigning the previous values to the new ones. This means that `prevprev` becomes the previous `prev`, and `prev` becomes the current `curr`.
+6. Once the loop completes, the function returns the last calculated Fibonacci number, which is stored in `prev`.
+
+By using memoization and dynamic programming, the code efficiently calculates the `n`th Fibonacci number without recalculating the same values multiple times.
