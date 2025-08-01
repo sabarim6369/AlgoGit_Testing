@@ -1,0 +1,37 @@
+Here's a step-by-step explanation of the code:
+
+**Class `Solution` and Method `fib`**
+
+The code defines a class `Solution` with a method `fib` that takes an integer `n` as input and returns the `n`-th Fibonacci number.
+
+**Initialization**
+
+The method initializes two integer variables: `prevprev` and `prev`. These variables will be used to store the previous two Fibonacci numbers.
+
+* `prevprev` is initialized to 0, which represents the 0th Fibonacci number.
+* `prev` is initialized to 1, which represents the 1st Fibonacci number.
+
+**Loop**
+
+The method enters a loop that runs from `i = 2` to `i = n`. This loop will calculate the `n`-th Fibonacci number using the previously calculated values.
+
+* Inside the loop, the variable `curr` is calculated as the sum of `prevprev` and `prev`. This is the formula for the `i`-th Fibonacci number: `F(i) = F(i-1) + F(i-2)`.
+* The values of `prevprev` and `prev` are then updated:
+	+ `prevprev` is assigned the value of `prev`, effectively moving the previous value to the "previous previous" position.
+	+ `prev` is assigned the value of `curr`, which becomes the new "previous" value.
+
+**Return**
+
+After the loop finishes, the method returns the value of `prev`, which is the `n`-th Fibonacci number.
+
+**Example**
+
+If `n` is 5, the method will calculate the 5th Fibonacci number as follows:
+
+* `prevprev` is initialized to 0, `prev` is initialized to 1
+* `i = 2`: `curr = 0 + 1 = 1`, `prevprev = 1`, `prev = 1`
+* `i = 3`: `curr = 1 + 1 = 2`, `prevprev = 1`, `prev = 2`
+* `i = 4`: `curr = 1 + 2 = 3`, `prevprev = 2`, `prev = 3`
+* `i = 5`: `curr = 2 + 3 = 5`, `prevprev = 3`, `prev = 5` (return value)
+
+The 5th Fibonacci number is 5.
