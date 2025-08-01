@@ -1,0 +1,20 @@
+Here's a step-by-step explanation of the concept used in the given code:
+
+**Problem Statement:**
+The problem is to find the maximum sum of a subset of non-negative integers (numbers) in a given array. If all numbers are negative, return the maximum number itself.
+
+**Concept:**
+
+1. **Set Data Structure:** A set is used to store the unique elements of the input array (`nums`). This allows us to easily find the maximum sum of a subset of non-negative integers.
+
+2. **Initialization:** The set `ans` is initialized with all elements of `nums`. The size of `ans` is checked. If the size is 1, it means all elements in `nums` are the same (either 0 or a single number). In this case, the function returns the only element in `nums`.
+
+3. **Counting Negative Numbers:** A variable `negcount` is used to count the number of negative elements in `nums`. This is done by iterating through `nums` and incrementing `negcount` whenever a negative element is found.
+
+4. **Special Case:** If all elements in `nums` are negative, the function returns the maximum element in `nums` (found using `max_element` from the `<algorithm>` library). This is because the maximum sum of a subset in this case is just the maximum element itself.
+
+5. **Summing Non-Negative Elements:** A variable `currsum` is used to sum up all non-negative elements in the set `ans`. This is done by iterating through `ans` and adding each non-negative element to `currsum` (skipping the negative elements by using the `continue` statement).
+
+6. **Returning the Result:** The function returns `currsum`, which is the maximum sum of a subset of non-negative integers in the input array.
+
+**Time Complexity:** The time complexity of this solution is O(n log n) due to the use of `max_element` and `set` operations, where n is the size of the input array.
