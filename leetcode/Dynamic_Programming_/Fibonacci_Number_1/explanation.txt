@@ -1,0 +1,23 @@
+Here's a step-by-step explanation of the Fibonacci sequence algorithm used in the given code:
+
+1. The `fib` function takes an integer `n` as input, which represents the position of the Fibonacci number to be calculated.
+
+2. The base case for Fibonacci sequence is when `n` is equal to 0, in which case the function returns 0.
+
+3. Initialize two variables, `prevprev` and `prev`, to the first two numbers in the Fibonacci sequence, which are 0 and 1 respectively.
+
+4. The function then enters a for loop that runs from 2 to `n`. This loop is used to calculate the Fibonacci sequence up to the `n`th term.
+
+5. Inside the loop, calculate the current term in the sequence by adding the previous two terms, `prevprev` and `prev`. This is the recursive definition of the Fibonacci sequence.
+
+6. Update the `prevprev` and `prev` variables to store the previous two terms for the next iteration of the loop.
+
+7. After the loop finishes, `prev` will hold the `n`th term in the Fibonacci sequence, which is then returned by the function.
+
+Note: This algorithm uses an iterative approach to calculate the Fibonacci sequence, which is more efficient than the recursive approach when calculating larger values of `n`.
+
+Here's an example output of the function:
+
+- If `n` is 5, the function returns 5 (0, 1, 1, 2, 3, 5).
+- If `n` is 8, the function returns 21 (0, 1, 1, 2, 3, 5, 8, 13, 21).
+- If `n` is 0, the function returns 0.
