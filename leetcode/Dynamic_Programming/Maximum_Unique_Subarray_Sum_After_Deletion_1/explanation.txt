@@ -1,0 +1,21 @@
+The given code is a solution to a problem where we need to find the maximum sum of a subset of the given set of integers, which contains at most one negative number.
+
+Here is a step-by-step explanation of the given code:
+
+1. **Step 1: Create a set from the input array**: The code creates a set `ans` from the given array `nums`. A set is an unordered collection of unique elements, so it removes any duplicates from the array.
+
+2. **Step 2: Check if all numbers in the array are negative**: The code checks if all numbers in the array are negative by counting the number of negative numbers. If all numbers are negative, it returns the maximum number in the array. This is because the maximum sum of a subset containing at most one negative number will always be the maximum number.
+
+3. **Step 3: Find the sum of non-negative numbers**: If the array contains at least one non-negative number, the code finds the sum of all non-negative numbers in the set. This is done by iterating over the set and adding only the non-negative numbers to a `currsum` variable.
+
+Here is the step-by-step algorithm:
+
+- Initialize an empty set `ans` to store unique elements from the input array `nums`.
+- Initialize a counter `negcount` to store the count of negative numbers in the array.
+- Iterate over the array `nums`. For each element, if it is negative, increment the `negcount`.
+- Check if all elements in the array are negative (i.e., `negcount` is equal to the size of the array). If yes, return the maximum element in the array.
+- Otherwise, initialize a variable `currsum` to zero.
+- Iterate over the set `ans`. For each element, if it is non-negative, add it to `currsum`.
+- Return `currsum`.
+
+This algorithm ensures that the maximum sum of a subset containing at most one negative number is found.
