@@ -1,0 +1,24 @@
+Here is a step-by-step explanation of the given code:
+
+1. The code defines a binary tree node structure `TreeNode` which has three properties: `val` to hold the value of the node, `left` and `right` to hold the left and right child nodes respectively.
+
+2. The code defines a class `Solution` that calculates the diameter of a binary tree.
+
+3. Inside the `Solution` class, the `maxdiameter` variable is initialized to 0. This variable will keep track of the maximum diameter found in the binary tree.
+
+4. The `helper` function is defined. This function is a recursive function that calculates the diameter of a given binary tree node.
+
+5. Inside the `helper` function:
+    - It first checks if the given node is `NULL`. If it is, the function returns 0 because there are no edges in a `NULL` node.
+    - Then it calculates the maximum diameter of the left and right subtrees using recursive calls to `helper`.
+    - It updates the `maxdiameter` variable if the maximum diameter of the left and right subtrees is greater than the current `maxdiameter`.
+    - Finally, it returns 1 plus the maximum height of the left and right subtrees. The maximum height is calculated as the maximum of the heights of the left and right subtrees.
+
+6. The `diameterOfBinaryTree` function is defined. This function is the main function that calculates the diameter of a binary tree.
+
+7. Inside the `diameterOfBinaryTree` function:
+    - It calls the `helper` function with the root node of the binary tree.
+    - The `helper` function updates the `maxdiameter` variable based on the maximum diameter of the left and right subtrees.
+    - Finally, the function returns the `maxdiameter` variable which represents the maximum diameter of the binary tree.
+
+The time complexity of this code is O(n) and the space complexity is O(n) due to the recursive nature of the code, where n is the number of nodes in the binary tree.
