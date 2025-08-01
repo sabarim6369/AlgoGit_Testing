@@ -1,0 +1,29 @@
+Here's a step-by-step explanation of the concept used in the given code:
+
+**Concept:** Memoization
+
+**Problem Statement:** Given an integer `n`, return the `n`th Fibonacci number.
+
+**Introduction to Fibonacci Sequence:**
+The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding ones, usually starting with 0 and 1. The sequence goes like this: 0, 1, 1, 2, 3, 5, 8, 13, and so on.
+
+**Memoization:**
+Memoization is a technique to optimize the execution of a function by storing the results of expensive function calls and reusing them when the same inputs occur again. In this case, the goal is to compute the `n`th Fibonacci number efficiently.
+
+**Algorithm Explanation:**
+
+1. **Base Case:** If `n` is 0, return 0. This is the base case for the Fibonacci sequence.
+2. Initialize two variables: `prevprev` (previous previous number) and `prev` (previous number). Set `prevprev` to 0 and `prev` to 1. These variables represent the last two numbers in the Fibonacci sequence.
+
+3. Enter a for loop that iterates from `i = 2` to `i = n`. This loop is used to calculate the `n`th Fibonacci number.
+4. Inside the loop, calculate the current number (`curr`) as the sum of `prevprev` and `prev`. This is the formula for the Fibonacci sequence.
+5. Update `prevprev` and `prev` for the next iteration. Set `prevprev` to `prev` (the previous number) and `prev` to `curr` (the current number).
+6. After the loop, return `prev` as the `n`th Fibonacci number, which is the final result of the computation.
+
+**Time Complexity:**
+The time complexity of this algorithm is O(n), which means the execution time grows linearly with the input size `n`.
+
+**Space Complexity:**
+The space complexity of this algorithm is O(1), which means the memory usage is constant and does not depend on the input size `n`.
+
+In summary, this code uses memoization to efficiently compute the `n`th Fibonacci number by storing the results of previous calculations and reusing them.
