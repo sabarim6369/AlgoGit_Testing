@@ -1,0 +1,23 @@
+Here is a step-by-step explanation of the concept used in the given code:
+
+**Concept:** The code implements the Fibonacci sequence, a series of numbers in which each number is the sum of the two preceding ones, usually starting with 0 and 1.
+
+**Step-by-Step Explanation:**
+
+1. The code defines a class `Solution` and a method `fib` that takes an integer `n` as input.
+
+2. The method starts by checking if `n` is equal to 0. If it is, the method returns 0, indicating that the first Fibonacci number is 0.
+
+3. The method then initializes two integer variables `prevprev` and `prev` to 0 and 1, respectively. These variables represent the two preceding numbers in the Fibonacci sequence.
+
+4. The method then uses a `for` loop to iterate from 2 to `n` (inclusive). For each iteration, it calculates the next number in the sequence, `curr`, by adding `prevprev` and `prev`.
+
+5. The method then updates the values of `prevprev` and `prev` to `prev` and `curr`, respectively. This is done to keep track of the previous two numbers in the sequence for the next iteration.
+
+6. After the loop finishes, the method returns the last calculated number, `prev`, which is the `n`-th Fibonacci number.
+
+**How the code works:**
+
+The code uses a technique called "dynamic programming" to efficiently calculate the `n`-th Fibonacci number. By storing the previous two numbers in the sequence, the code avoids the need to recalculate the entire sequence for each new number.
+
+For example, to calculate the 5th Fibonacci number, the code would first calculate the 3rd and 4th numbers, and then use those numbers to calculate the 5th number. This approach significantly reduces the computational complexity of the algorithm, making it more efficient for large values of `n`.
